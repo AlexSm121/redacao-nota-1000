@@ -1,0 +1,1728 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O Mapa da Redação Nota 1000 — Guia Definitivo ENEM</title>
+  <meta name="description" content="Aprenda a escrever redações nota 1000 no ENEM com 3 modelos completos, 5 esqueletos coringa e um guia passo a passo das 5 competências." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --rosa:        #E91E8C;
+      --rosa-light:  #FCE4F3;
+      --rosa-mid:    #F48FB1;
+      --azul:        #1565C0;
+      --azul-light:  #E3F2FD;
+      --azul-mid:    #42A5F5;
+      --verde:       #2E7D32;
+      --verde-light: #E8F5E9;
+      --verde-mid:   #66BB6A;
+      --branco:      #FFFFFF;
+      --off:         #F9F9FB;
+      --cinza:       #6B7280;
+      --escuro:      #111827;
+      --text:        #1F2937;
+
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body:    'Inter', system-ui, sans-serif;
+
+      --radius: 16px;
+      --shadow: 0 8px 40px rgba(0,0,0,.10);
+      --shadow-lg: 0 20px 60px rgba(0,0,0,.15);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--branco);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── UTILS ─────────────────────────────────────────────── */
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    .container--narrow { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+    .tag--rosa  { background: var(--rosa-light); color: var(--rosa); }
+    .tag--azul  { background: var(--azul-light); color: var(--azul); }
+    .tag--verde { background: var(--verde-light); color: var(--verde); }
+
+    /* ── TOPBAR ────────────────────────────────────────────── */
+    .topbar {
+      background: var(--escuro);
+      color: var(--branco);
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: .02em;
+    }
+    .topbar strong { color: var(--rosa-mid); }
+
+    /* ── NAV ───────────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #E5E7EB;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--azul);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--rosa); }
+    .nav-cta {
+      background: var(--rosa);
+      color: var(--branco);
+      border: none;
+      border-radius: 999px;
+      padding: 10px 24px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(233,30,140,.35); }
+
+    /* ── HERO ──────────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, var(--azul) 0%, #0D47A1 60%, #1A237E 100%);
+      padding: 80px 24px 100px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(233,30,140,.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -60px;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(102,187,106,.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      background: rgba(255,255,255,.12);
+      color: var(--rosa-mid);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(244,143,177,.3);
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 6vw, 68px);
+      font-weight: 900;
+      color: var(--branco);
+      line-height: 1.08;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--rosa-mid);
+      display: block;
+    }
+    .hero-sub {
+      font-size: clamp(16px, 2.2vw, 20px);
+      color: rgba(255,255,255,.8);
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.55;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 44px;
+    }
+    .hero-badge {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.2);
+      color: var(--branco);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hero-badge .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--verde-mid);
+      flex-shrink: 0;
+    }
+
+    /* Hero CTA block */
+    .hero-cta-block {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 24px;
+      padding: 36px 40px;
+      max-width: 480px;
+      margin: 0 auto;
+      backdrop-filter: blur(8px);
+    }
+    .price-label { font-size: 13px; color: rgba(255,255,255,.6); margin-bottom: 4px; }
+    .price-was {
+      font-size: 18px;
+      color: rgba(255,255,255,.45);
+      text-decoration: line-through;
+      margin-bottom: 4px;
+    }
+    .price-now {
+      font-size: clamp(40px, 7vw, 58px);
+      font-family: var(--font-display);
+      font-weight: 900;
+      color: var(--branco);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .price-now span { font-size: 28px; }
+    .price-installments { font-size: 13px; color: rgba(255,255,255,.55); margin-bottom: 28px; }
+    .btn-primary {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, var(--rosa) 0%, #C2185B 100%);
+      color: var(--branco);
+      font-size: 17px;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      padding: 18px 24px;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      transition: transform .15s, box-shadow .15s;
+      letter-spacing: .01em;
+      box-shadow: 0 6px 24px rgba(233,30,140,.4);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(233,30,140,.5); }
+    .btn-primary small { display: block; font-size: 11px; font-weight: 500; opacity: .8; margin-top: 3px; }
+    .guarantee-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+      font-size: 12px;
+      color: rgba(255,255,255,.5);
+    }
+    .guarantee-row svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+    /* ── SOCIAL PROOF BAR ──────────────────────────────────── */
+    .proof-bar {
+      background: var(--escuro);
+      padding: 18px 24px;
+    }
+    .proof-bar-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+    }
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,.75);
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .proof-item strong { color: var(--branco); }
+    .proof-icon {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+    .proof-icon--rosa  { background: rgba(233,30,140,.2); }
+    .proof-icon--verde { background: rgba(102,187,106,.2); }
+    .proof-icon--azul  { background: rgba(66,165,245,.2); }
+
+    /* ── SECTIONS COMMON ───────────────────────────────────── */
+    section { padding: 80px 0; }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 900;
+      color: var(--escuro);
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+    .section-sub {
+      font-size: 16px;
+      color: var(--cinza);
+      max-width: 560px;
+      line-height: 1.65;
+    }
+    .section-header { margin-bottom: 52px; }
+    .section-header--center { text-align: center; }
+    .section-header--center .section-sub { margin: 0 auto; }
+
+    /* ── PROBLEM ───────────────────────────────────────────── */
+    .problem-section { background: var(--off); }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .problem-card {
+      background: var(--branco);
+      border-radius: var(--radius);
+      padding: 28px;
+      border-left: 4px solid var(--rosa);
+      box-shadow: var(--shadow);
+    }
+    .problem-card .icon { font-size: 26px; margin-bottom: 12px; }
+    .problem-card h3 {
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: var(--escuro);
+    }
+    .problem-card p { font-size: 14px; color: var(--cinza); line-height: 1.6; }
+
+    /* ── WHAT YOU GET ──────────────────────────────────────── */
+    .product-section { background: var(--branco); }
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+    @media (max-width: 720px) { .product-grid { grid-template-columns: 1fr; } }
+
+    .product-card {
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .product-card--rosa  { background: linear-gradient(135deg, var(--rosa-light) 0%, #fff 100%); border: 1.5px solid var(--rosa-mid); }
+    .product-card--azul  { background: linear-gradient(135deg, var(--azul-light) 0%, #fff 100%); border: 1.5px solid var(--azul-mid); }
+    .product-card--verde { background: linear-gradient(135deg, var(--verde-light) 0%, #fff 100%); border: 1.5px solid var(--verde-mid); }
+    .product-card--dark  { background: linear-gradient(135deg, var(--escuro) 0%, #1F2937 100%); border: none; }
+
+    .product-card-num {
+      font-family: var(--font-display);
+      font-size: 52px;
+      font-weight: 900;
+      opacity: .08;
+      position: absolute;
+      top: 12px; right: 20px;
+      line-height: 1;
+    }
+    .product-card--dark .product-card-num { opacity: .12; color: var(--branco); }
+
+    .product-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      margin-top: 8px;
+    }
+    .product-card--rosa  h3 { color: var(--rosa); }
+    .product-card--azul  h3 { color: var(--azul); }
+    .product-card--verde h3 { color: var(--verde); }
+    .product-card--dark  h3 { color: var(--branco); }
+
+    .product-card p { font-size: 14px; color: var(--cinza); line-height: 1.65; }
+    .product-card--dark p { color: rgba(255,255,255,.6); }
+
+    .product-card ul { list-style: none; margin-top: 14px; }
+    .product-card ul li {
+      font-size: 14px;
+      color: var(--text);
+      padding: 5px 0 5px 22px;
+      position: relative;
+      border-bottom: 1px solid rgba(0,0,0,.05);
+    }
+    .product-card ul li:last-child { border-bottom: none; }
+    .product-card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .product-card--rosa  ul li::before { color: var(--rosa); }
+    .product-card--azul  ul li::before { color: var(--azul); }
+    .product-card--verde ul li::before { color: var(--verde); }
+    .product-card--dark  ul li { color: rgba(255,255,255,.75); border-color: rgba(255,255,255,.08); }
+    .product-card--dark  ul li::before { color: var(--verde-mid); }
+
+    /* Full-width card */
+    .product-card--full { grid-column: 1 / -1; }
+
+    /* ── COMPETÊNCIAS ──────────────────────────────────────── */
+    .comp-section { background: var(--escuro); }
+    .comp-section .section-title { color: var(--branco); }
+    .comp-section .section-sub { color: rgba(255,255,255,.55); }
+
+    .comp-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 900px) { .comp-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .comp-grid { grid-template-columns: 1fr; } }
+
+    .comp-card {
+      border-radius: 14px;
+      padding: 24px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .comp-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,.05) 0%, transparent 100%);
+      pointer-events: none;
+    }
+    .comp-card--1 { background: linear-gradient(135deg, #C2185B 0%, var(--rosa) 100%); }
+    .comp-card--2 { background: linear-gradient(135deg, #0D47A1 0%, var(--azul) 100%); }
+    .comp-card--3 { background: linear-gradient(135deg, #1B5E20 0%, var(--verde) 100%); }
+    .comp-card--4 { background: linear-gradient(135deg, #7B1FA2 0%, #AB47BC 100%); }
+    .comp-card--5 { background: linear-gradient(135deg, #E65100 0%, #FF8F00 100%); }
+
+    .comp-code {
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--branco);
+      opacity: .25;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .comp-pts {
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--branco);
+      line-height: 1;
+    }
+    .comp-pts span { font-size: 12px; font-weight: 500; opacity: .7; display: block; }
+    .comp-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,255,255,.85);
+      margin: 10px 0 6px;
+      line-height: 1.3;
+    }
+    .comp-desc { font-size: 11px; color: rgba(255,255,255,.55); line-height: 1.5; }
+
+    /* ── ESQUELETOS ────────────────────────────────────────── */
+    .ske-section { background: var(--off); }
+    .ske-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .ske-card {
+      background: var(--branco);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      border-top: 4px solid transparent;
+    }
+    .ske-card--1 { border-color: var(--rosa); }
+    .ske-card--2 { border-color: var(--azul); }
+    .ske-card--3 { border-color: var(--verde); }
+    .ske-card--4 { border-color: #AB47BC; }
+    .ske-card--5 { border-color: #FF8F00; }
+
+    .ske-num {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .ske-card--1 .ske-num { color: var(--rosa); }
+    .ske-card--2 .ske-num { color: var(--azul); }
+    .ske-card--3 .ske-num { color: var(--verde); }
+    .ske-card--4 .ske-num { color: #AB47BC; }
+    .ske-card--5 .ske-num { color: #FF8F00; }
+
+    .ske-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 10px; color: var(--escuro); }
+    .ske-card p  { font-size: 13.5px; color: var(--cinza); line-height: 1.65; }
+    .ske-fill {
+      display: inline-block;
+      background: var(--azul-light);
+      color: var(--azul);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 6px;
+      margin-top: 12px;
+    }
+
+    /* ── MODELOS PREVIEW ───────────────────────────────────── */
+    .models-section { background: var(--branco); }
+    .models-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: 2px solid #E5E7EB;
+      background: var(--branco);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .15s;
+      color: var(--cinza);
+    }
+    .tab-btn.active {
+      background: var(--azul);
+      border-color: var(--azul);
+      color: var(--branco);
+    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    .model-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid #E5E7EB;
+    }
+    .model-header {
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .model-header--rosa  { background: linear-gradient(135deg, var(--rosa) 0%, #C2185B 100%); }
+    .model-header--azul  { background: linear-gradient(135deg, var(--azul) 0%, #0D47A1 100%); }
+    .model-header--verde { background: linear-gradient(135deg, var(--verde) 0%, #1B5E20 100%); }
+    .model-header h3 { font-family: var(--font-display); font-size: 22px; font-weight: 900; color: var(--branco); }
+    .model-header p  { font-size: 13px; color: rgba(255,255,255,.7); margin-top: 3px; }
+    .nota-badge {
+      background: rgba(255,255,255,.15);
+      border: 1.5px solid rgba(255,255,255,.3);
+      color: var(--branco);
+      font-weight: 800;
+      font-size: 20px;
+      padding: 8px 20px;
+      border-radius: 12px;
+      white-space: nowrap;
+    }
+    .model-body { background: var(--branco); padding: 32px; }
+    .para-block { margin-bottom: 24px; }
+    .para-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    .para-label--intro  { background: var(--rosa-light);  color: var(--rosa); }
+    .para-label--dev1   { background: var(--azul-light);  color: var(--azul); }
+    .para-label--dev2   { background: var(--verde-light); color: var(--verde); }
+    .para-label--concl  { background: #FFF3E0; color: #E65100; }
+    .para-text {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: var(--text);
+      border-left: 3px solid #E5E7EB;
+      padding-left: 16px;
+    }
+    .model-scores {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      background: var(--off);
+      padding: 20px 32px;
+      border-top: 1px solid #E5E7EB;
+    }
+    @media (max-width: 600px) { .model-scores { grid-template-columns: repeat(2, 1fr); } }
+    .score-chip { text-align: center; }
+    .score-chip .code { font-size: 11px; font-weight: 700; color: var(--cinza); }
+    .score-chip .pts  { font-size: 20px; font-weight: 800; color: var(--verde); }
+    .score-chip .lbl  { font-size: 10px; color: var(--cinza); }
+
+    /* ── AAMFE ─────────────────────────────────────────────── */
+    .aamfe-section { background: linear-gradient(135deg, var(--azul) 0%, #0D47A1 100%); padding: 72px 0; }
+    .aamfe-section .section-title { color: var(--branco); }
+    .aamfe-section .section-sub   { color: rgba(255,255,255,.65); }
+    .aamfe-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-top: 40px;
+    }
+    @media (max-width: 800px) { .aamfe-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .aamfe-grid { grid-template-columns: 1fr; } }
+
+    .aamfe-card {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 14px;
+      padding: 22px 16px;
+      text-align: center;
+      backdrop-filter: blur(6px);
+      transition: background .2s;
+    }
+    .aamfe-card:hover { background: rgba(255,255,255,.16); }
+    .aamfe-letter {
+      font-family: var(--font-display);
+      font-size: 40px;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .aamfe-card:nth-child(1) .aamfe-letter { color: var(--rosa-mid); }
+    .aamfe-card:nth-child(2) .aamfe-letter { color: var(--verde-mid); }
+    .aamfe-card:nth-child(3) .aamfe-letter { color: var(--azul-mid); }
+    .aamfe-card:nth-child(4) .aamfe-letter { color: #FFCC80; }
+    .aamfe-card:nth-child(5) .aamfe-letter { color: #CE93D8; }
+    .aamfe-name { font-size: 13px; font-weight: 700; color: var(--branco); margin-bottom: 6px; }
+    .aamfe-desc { font-size: 12px; color: rgba(255,255,255,.55); line-height: 1.5; }
+
+    .aamfe-example {
+      margin-top: 36px;
+      background: rgba(0,0,0,.25);
+      border-radius: 14px;
+      padding: 24px 28px;
+      border-left: 4px solid var(--verde-mid);
+    }
+    .aamfe-example-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--verde-mid);
+      margin-bottom: 10px;
+    }
+    .aamfe-example p {
+      font-size: 15px;
+      color: rgba(255,255,255,.85);
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    /* ── TESTEMUNHOS ───────────────────────────────────────── */
+    .testi-section { background: var(--off); }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .testi-card {
+      background: var(--branco);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    .testi-quote {
+      font-family: var(--font-display);
+      font-size: 56px;
+      line-height: .8;
+      color: var(--rosa-mid);
+      margin-bottom: 12px;
+    }
+    .testi-text {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+    .testi-stars { color: #F59E0B; font-size: 16px; margin-bottom: 10px; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--branco);
+      flex-shrink: 0;
+    }
+    .testi-avatar--rosa  { background: var(--rosa); }
+    .testi-avatar--azul  { background: var(--azul); }
+    .testi-avatar--verde { background: var(--verde); }
+    .testi-name { font-size: 14px; font-weight: 700; color: var(--escuro); }
+    .testi-city { font-size: 12px; color: var(--cinza); }
+    .nota-pill {
+      position: absolute;
+      top: 20px; right: 20px;
+      background: var(--verde-light);
+      color: var(--verde);
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+
+    /* ── CONECTIVOS ────────────────────────────────────────── */
+    .con-section { background: var(--branco); }
+    .con-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+    .con-card { border-radius: 12px; padding: 20px 22px; }
+    .con-card--rosa  { background: var(--rosa-light);  border-left: 4px solid var(--rosa); }
+    .con-card--azul  { background: var(--azul-light);  border-left: 4px solid var(--azul); }
+    .con-card--verde { background: var(--verde-light); border-left: 4px solid var(--verde); }
+    .con-card--pur   { background: #F3E5F5; border-left: 4px solid #AB47BC; }
+    .con-card--ora   { background: #FFF3E0; border-left: 4px solid #FF8F00; }
+    .con-card--teal  { background: #E0F2F1; border-left: 4px solid #00897B; }
+
+    .con-type {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .con-card--rosa  .con-type { color: var(--rosa); }
+    .con-card--azul  .con-type { color: var(--azul); }
+    .con-card--verde .con-type { color: var(--verde); }
+    .con-card--pur   .con-type { color: #7B1FA2; }
+    .con-card--ora   .con-type { color: #E65100; }
+    .con-card--teal  .con-type { color: #00695C; }
+
+    .con-list { display: flex; flex-wrap: wrap; gap: 7px; }
+    .con-pill {
+      background: rgba(255,255,255,.7);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 999px;
+      color: var(--escuro);
+    }
+
+    /* ── PRICING ───────────────────────────────────────────── */
+    .pricing-section { background: var(--off); }
+    .pricing-card {
+      background: var(--branco);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      max-width: 540px;
+      margin: 0 auto;
+      border: 2px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+    }
+    .pricing-card::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      background: linear-gradient(135deg, var(--rosa), var(--azul), var(--verde));
+      border-radius: 26px;
+      z-index: -1;
+    }
+    .pricing-top {
+      background: linear-gradient(135deg, var(--escuro) 0%, #1F2937 100%);
+      padding: 36px 40px 28px;
+      text-align: center;
+    }
+    .pricing-top .label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--rosa-mid);
+      margin-bottom: 12px;
+    }
+    .pricing-top h3 {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--branco);
+      margin-bottom: 20px;
+    }
+    .pricing-was { font-size: 16px; color: rgba(255,255,255,.35); text-decoration: line-through; }
+    .pricing-now {
+      font-family: var(--font-display);
+      font-size: 64px;
+      font-weight: 900;
+      color: var(--branco);
+      line-height: 1;
+    }
+    .pricing-now sup { font-size: 28px; vertical-align: super; }
+    .pricing-cents { font-size: 13px; color: rgba(255,255,255,.5); margin-top: 4px; }
+    .pricing-body { padding: 32px 40px; }
+    .pricing-body ul { list-style: none; }
+    .pricing-body ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      font-size: 15px;
+      color: var(--text);
+      border-bottom: 1px solid #F3F4F6;
+    }
+    .pricing-body ul li:last-child { border-bottom: none; }
+    .pricing-body ul li .ck {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--verde-light);
+      color: var(--verde);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .pricing-body .btn-primary { margin-top: 28px; font-size: 18px; padding: 20px; }
+    .pricing-guarantee {
+      text-align: center;
+      margin-top: 18px;
+      font-size: 13px;
+      color: var(--cinza);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    /* ── FAQ ───────────────────────────────────────────────── */
+    .faq-section { background: var(--branco); }
+    .faq-list { max-width: 680px; margin: 0 auto; }
+    .faq-item {
+      border-bottom: 1px solid #E5E7EB;
+    }
+    .faq-q {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--escuro);
+      text-align: left;
+      gap: 12px;
+    }
+    .faq-icon {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--azul-light);
+      color: var(--azul);
+      font-size: 18px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      transition: transform .2s;
+      font-weight: 700;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--rosa-light); color: var(--rosa); }
+    .faq-a {
+      font-size: 15px;
+      color: var(--cinza);
+      line-height: 1.7;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .3s ease, padding .3s;
+    }
+    .faq-item.open .faq-a { max-height: 300px; padding-bottom: 20px; }
+
+    /* ── FINAL CTA ─────────────────────────────────────────── */
+    .final-cta {
+      background: linear-gradient(135deg, var(--escuro) 0%, #1F2937 100%);
+      padding: 80px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: -100px; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(233,30,140,.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .final-cta h2 {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 900;
+      color: var(--branco);
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+    .final-cta h2 em { font-style: normal; color: var(--rosa-mid); }
+    .final-cta p {
+      font-size: 17px;
+      color: rgba(255,255,255,.6);
+      margin-bottom: 36px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .final-cta .btn-primary {
+      display: inline-block;
+      width: auto;
+      padding: 20px 48px;
+      font-size: 18px;
+    }
+
+    /* ── FOOTER ────────────────────────────────────────────── */
+    footer {
+      background: #0A0A0A;
+      padding: 32px 24px;
+      text-align: center;
+    }
+    footer p { font-size: 13px; color: rgba(255,255,255,.3); line-height: 1.7; }
+    footer a { color: rgba(255,255,255,.4); text-decoration: none; }
+    footer a:hover { color: rgba(255,255,255,.7); }
+
+    /* ── ANIMATIONS ────────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero h1, .hero-sub, .hero-badges, .hero-cta-block {
+      animation: fadeUp .6s ease both;
+    }
+    .hero-sub        { animation-delay: .1s; }
+    .hero-badges     { animation-delay: .2s; }
+    .hero-cta-block  { animation-delay: .3s; }
+
+    /* ── FLOATING CTA ──────────────────────────────────────── */
+    .float-cta {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 200;
+      background: linear-gradient(135deg, var(--rosa) 0%, #C2185B 100%);
+      color: var(--branco);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 14px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 8px 32px rgba(233,30,140,.45);
+      display: none;
+      align-items: center;
+      gap: 8px;
+      transition: transform .15s;
+    }
+    .float-cta:hover { transform: translateY(-3px); }
+    @media (max-width: 640px) { .float-cta { display: flex; } }
+
+    /* ── RESPONSIVE ────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .proof-bar-inner { gap: 16px; }
+      .comp-grid { grid-template-columns: repeat(2, 1fr); }
+      .aamfe-grid { grid-template-columns: 1fr 1fr; }
+      .hero-cta-block { padding: 28px 24px; }
+      .model-body { padding: 20px; }
+      .model-scores { padding: 16px 20px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+
+    /* scrolled nav */
+    nav.scrolled { box-shadow: 0 2px 16px rgba(0,0,0,.08); }
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  🚨 <strong>APENAS R$ 10,00:</strong> Acesso imediato após a compra · Se não se sentir mais preparado, devolvemos tudo
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo">Redação <span>1000</span></a>
+  <a href="#preco" class="nav-cta">Quero o Guia →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container--narrow">
+    <div class="hero-eyebrow">✦ Guia definitivo para o ENEM</div>
+    <h1>
+      Aprenda a escrever
+      <em>redação nota 1000</em>
+      no ENEM
+    </h1>
+    <p class="hero-sub">
+      O único guia com 3 modelos completos comentados, 5 esqueletos coringa prontos para usar e o passo a passo das 5 competências — tudo que você precisa para gabaritar a redação.
+    </p>
+    <div class="hero-badges">
+      <div class="hero-badge"><span class="dot"></span>3 Redações nota 1000 completas</div>
+      <div class="hero-badge"><span class="dot"></span>5 Esqueletos coringa</div>
+      <div class="hero-badge"><span class="dot"></span>Caderno de treino oficial</div>
+      <div class="hero-badge"><span class="dot"></span>Acesso imediato em PDF</div>
+    </div>
+
+    <div class="hero-cta-block">
+      <p class="price-label">Valor de investimento</p>
+      <p class="price-was">De R$ 97,00</p>
+      <p class="price-now"><span>R$</span> 10<span style="font-size:32px">,00</span></p>
+      <p class="price-installments">pagamento único · acesso para sempre</p>
+      <a href="#preco" class="btn-primary">
+        QUERO A NOTA 1000 AGORA
+        <small>🔒 Pagamento 100% seguro · Acesso imediato</small>
+      </a>
+      <div class="guarantee-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        Garantia de 7 dias: não se sentiu mais preparado? Devolvemos tudo.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF BAR -->
+<div class="proof-bar">
+  <div class="proof-bar-inner">
+    <div class="proof-item">
+      <div class="proof-icon proof-icon--rosa">📄</div>
+      <div><strong>3 modelos</strong> nota 1000 completos</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-icon proof-icon--verde">🎯</div>
+      <div><strong>5 esqueletos</strong> coringa adaptáveis</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-icon proof-icon--azul">⚡</div>
+      <div><strong>Acesso imediato</strong> em PDF</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-icon proof-icon--rosa">🏆</div>
+      <div><strong>Método testado</strong> e aprovado</div>
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem-section">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="tag tag--rosa">O problema real</div>
+      <h2 class="section-title">Por que a maioria tira nota baixa na redação?</h2>
+      <p class="section-sub">Não é falta de inteligência. São erros simples que custam centenas de pontos — e que têm solução.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="icon">😰</div>
+        <h3>Não sabe estruturar os argumentos</h3>
+        <p>Escreve muito, mas sem organização lógica. Os corretores não conseguem identificar a tese e os desenvolvimentos ficam soltos.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">📉</div>
+        <h3>Proposta de intervenção vaga</h3>
+        <p>"O governo deve tomar medidas" não vale pontos. A C5 exige AGENTE + AÇÃO + MEIO + FINALIDADE + EFEITO — e a maioria nem sabe disso.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">🔁</div>
+        <h3>Conectivos repetidos e pobres</h3>
+        <p>Começar todos os parágrafos com "Além disso" é um sinal claro para o corretor de que o texto não tem coesão real.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">📚</div>
+        <h3>Falta de repertório sociocultural</h3>
+        <p>Sem citações, dados e referências, os argumentos ficam rasos. A C3 exige evidências que sustentem seu ponto de vista.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">⏳</div>
+        <h3>Sem método de treino eficiente</h3>
+        <p>Escrever redações aleatoriamente sem um esqueleto guia é desperdício de tempo. Você precisa de estrutura antes de prática.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">😵</div>
+        <h3>Medo de fugir do tema</h3>
+        <p>A fuga total de tema zera a redação. Mas com o método certo, você nunca mais vai ter esse risco.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section class="product-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag tag--azul">O que você recebe</div>
+      <h2 class="section-title">Tudo que você precisa.<br>Em um único guia.</h2>
+      <p class="section-sub">Sem enrolação, sem teoria inútil. Só o que efetivamente aumenta sua nota.</p>
+    </div>
+    <div class="product-grid">
+
+      <div class="product-card product-card--rosa">
+        <div class="product-card-num">01</div>
+        <div class="tag tag--rosa">Essencial</div>
+        <h3>📋 Guia Completo das 5 Competências</h3>
+        <p>Entenda exatamente o que cada corretor está avaliando em cada competência e como pontuar 200 pontos em todas elas.</p>
+        <ul>
+          <li>Critérios detalhados de C1 a C5</li>
+          <li>O que sobe e derruba sua nota</li>
+          <li>Como a correção dupla funciona</li>
+          <li>Quando um terceiro corretor é chamado</li>
+        </ul>
+      </div>
+
+      <div class="product-card product-card--azul">
+        <div class="product-card-num">02</div>
+        <div class="tag tag--azul">Estrutura</div>
+        <h3>🏗️ Passo a Passo dos 4 Parágrafos</h3>
+        <p>Um guia visual e prático para construir cada parágrafo com o conteúdo certo, no tamanho certo, com os conectivos certos.</p>
+        <ul>
+          <li>Introdução: como abrir com repertório</li>
+          <li>Desenvolvimento: argumento + evidência</li>
+          <li>Conclusão com AAMFE completo</li>
+          <li>Gestão de tempo: 10+40+10 minutos</li>
+        </ul>
+      </div>
+
+      <div class="product-card product-card--verde">
+        <div class="product-card-num">03</div>
+        <div class="tag tag--verde">Modelos</div>
+        <h3>✍️ 3 Redações Nota 1000 Comentadas</h3>
+        <p>Textos reais, com parágrafos identificados por cor, análise de cada competência e tabela de notas. Leia e aprenda fazendo.</p>
+        <ul>
+          <li>Violência contra a mulher</li>
+          <li>Crise hídrica no Brasil</li>
+          <li>Saúde mental dos jovens</li>
+          <li>Tabela C1–C5 em cada modelo</li>
+        </ul>
+      </div>
+
+      <div class="product-card product-card--rosa">
+        <div class="product-card-num">04</div>
+        <div class="tag tag--rosa">Estratégia</div>
+        <h3>🎯 5 Esqueletos Coringa Adaptáveis</h3>
+        <p>Estruturas prontas com espaços para adaptar a qualquer tema do ENEM. Preencha os parênteses e sua redação já tem esqueleto e coesão garantidos.</p>
+        <ul>
+          <li>5 modelos com abordagens distintas</li>
+          <li>Conectivos já inseridos nos lugares certos</li>
+          <li>Proposta de intervenção estruturada</li>
+          <li>Funciona para qualquer tema</li>
+        </ul>
+      </div>
+
+      <div class="product-card product-card--dark product-card--full">
+        <div class="product-card-num" style="color:#fff;">05</div>
+        <div class="tag" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7)">Bônus</div>
+        <h3>📝 Caderno de Treino com Folhas Oficiais</h3>
+        <p>Duas folhas de treino no formato exato do ENEM: uma para rascunho e uma para a versão definitiva. Treine com a mesma experiência da prova real.</p>
+        <ul>
+          <li>Folha de rascunho (30 linhas numeradas)</li>
+          <li>Folha definitiva (29 linhas com orientações)</li>
+          <li>Formato idêntico ao da prova oficial</li>
+          <li>Imprima quantas vezes quiser</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMPETÊNCIAS -->
+<section class="comp-section">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="tag" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.6)">As 5 Competências</div>
+      <h2 class="section-title">O que vale 1000 pontos?</h2>
+      <p class="section-sub">Cada competência vale 200 pontos. O guia explica exatamente como maximizar cada uma.</p>
+    </div>
+    <div class="comp-grid">
+      <div class="comp-card comp-card--1">
+        <div class="comp-code">C1</div>
+        <div class="comp-pts">200<span>pontos</span></div>
+        <div class="comp-name">Norma Culta da Língua Portuguesa</div>
+        <div class="comp-desc">Ortografia, acentuação, concordância verbal e nominal, regência e pontuação.</div>
+      </div>
+      <div class="comp-card comp-card--2">
+        <div class="comp-code">C2</div>
+        <div class="comp-pts">200<span>pontos</span></div>
+        <div class="comp-name">Compreensão e Repertório do Tema</div>
+        <div class="comp-desc">Entendimento da proposta e uso de áreas do conhecimento como contexto.</div>
+      </div>
+      <div class="comp-card comp-card--3">
+        <div class="comp-code">C3</div>
+        <div class="comp-pts">200<span>pontos</span></div>
+        <div class="comp-name">Seleção e Organização dos Argumentos</div>
+        <div class="comp-desc">Coerência, organização das ideias e qualidade dos argumentos apresentados.</div>
+      </div>
+      <div class="comp-card comp-card--4">
+        <div class="comp-code">C4</div>
+        <div class="comp-pts">200<span>pontos</span></div>
+        <div class="comp-name">Mecanismos de Coesão Textual</div>
+        <div class="comp-desc">Uso diversificado e correto de conectivos para ligar ideias e parágrafos.</div>
+      </div>
+      <div class="comp-card comp-card--5">
+        <div class="comp-code">C5</div>
+        <div class="comp-pts">200<span>pontos</span></div>
+        <div class="comp-name">Proposta de Intervenção Social</div>
+        <div class="comp-desc">Ação concreta com Agente, Meio, Finalidade e Detalhamento. A mais objetiva.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODELOS -->
+<section class="models-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag tag--azul">Prévia dos modelos</div>
+      <h2 class="section-title">Veja uma redação<br>nota 1000 de perto</h2>
+      <p class="section-sub">Leia os modelos completos e entenda exatamente por que cada parágrafo pontua ao máximo.</p>
+    </div>
+
+    <div class="models-tabs">
+      <button class="tab-btn active" onclick="showTab(0)">Violência contra a mulher</button>
+      <button class="tab-btn" onclick="showTab(1)">Crise Hídrica</button>
+      <button class="tab-btn" onclick="showTab(2)">Saúde Mental</button>
+    </div>
+
+    <!-- TAB 1 -->
+    <div class="tab-panel active">
+      <div class="model-card">
+        <div class="model-header model-header--rosa">
+          <div>
+            <h3>A Violência Contra a Mulher no Brasil</h3>
+            <p>Tema: Formas de enfrentamento à violência contra a mulher</p>
+          </div>
+          <div class="nota-badge">🏆 1000</div>
+        </div>
+        <div class="model-body">
+          <div class="para-block">
+            <span class="para-label para-label--intro">● Introdução</span>
+            <p class="para-text">Em 1651, o filósofo inglês Thomas Hobbes defendeu, em sua obra <em>Leviatã</em>, que a violência é inerente ao ser humano e que, sem a regulação do Estado, a vida seria "solitária, pobre, sórdida, brutal e breve". Séculos depois, a violência contra a mulher permanece como uma das expressões mais perversas dessa brutalidade, revelando que, no Brasil contemporâneo, o aparato estatal ainda falha em proteger metade de sua população. Nesse contexto, a análise das causas estruturais desse fenômeno e de seus mecanismos de enfrentamento torna-se urgente e necessária.</p>
+          </div>
+          <div class="para-block">
+            <span class="para-label para-label--dev1">● Desenvolvimento I</span>
+            <p class="para-text">Do ponto de vista histórico e cultural, a violência doméstica radica-se em uma herança patriarcal que, durante séculos, naturalizou a submissão feminina. Segundo dados do Fórum Brasileiro de Segurança Pública, uma mulher é agredida fisicamente a cada 4 minutos no Brasil, evidenciando a persistência de estruturas machistas que compreendem a mulher como propriedade do homem. A socióloga Rita Segato aponta que essa violência não é apenas física, mas simbólica: ela perpassa discursos, legislações omissas e práticas culturais que, historicamente, silenciaram as vítimas e protegeram os agressores.</p>
+          </div>
+          <div class="para-block">
+            <span class="para-label para-label--dev2">● Desenvolvimento II</span>
+            <p class="para-text">Além do fator cultural, a ineficiência do sistema de proteção contribui para a perpetuação desse problema. Embora a Lei Maria da Penha, sancionada em 2006, represente um avanço legislativo significativo, sua aplicação ainda é falha: pesquisas do IPEA mostram que apenas 3% dos municípios brasileiros contam com Delegacias da Mulher em funcionamento pleno. A filósofa Hannah Arendt afirmou que a violência prospera onde o poder legítimo do Estado é ausente.</p>
+          </div>
+          <div class="para-block">
+            <span class="para-label para-label--concl">● Conclusão</span>
+            <p class="para-text">Diante do exposto, evidencia-se que a violência contra a mulher é um problema estrutural que exige respostas igualmente estruturais. Cabe ao Governo Federal, em parceria com estados e municípios, ampliar a rede de acolhimento às vítimas, por meio da criação de centros de atendimento especializado em todos os municípios com mais de 20 mil habitantes, a fim de garantir proteção imediata e acompanhamento psicossocial às mulheres em situação de risco. Somente por meio de ações integradas e contínuas será possível construir uma sociedade em que todas as mulheres vivam com dignidade e segurança.</p>
+          </div>
+        </div>
+        <div class="model-scores">
+          <div class="score-chip"><div class="code">C1</div><div class="pts">200</div><div class="lbl">Norma Culta</div></div>
+          <div class="score-chip"><div class="code">C2</div><div class="pts">200</div><div class="lbl">Repertório</div></div>
+          <div class="score-chip"><div class="code">C3</div><div class="pts">200</div><div class="lbl">Argumentos</div></div>
+          <div class="score-chip"><div class="code">C4</div><div class="pts">200</div><div class="lbl">Coesão</div></div>
+          <div class="score-chip"><div class="code">C5</div><div class="pts">200</div><div class="lbl">Intervenção</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2 -->
+    <div class="tab-panel">
+      <div class="model-card">
+        <div class="model-header model-header--azul">
+          <div>
+            <h3>Crise Hídrica: Desafios e Perspectivas</h3>
+            <p>Tema: Desafios da gestão dos recursos hídricos no Brasil</p>
+          </div>
+          <div class="nota-badge">🏆 1000</div>
+        </div>
+        <div class="model-body">
+          <div class="para-block">
+            <span class="para-label para-label--intro">● Introdução</span>
+            <p class="para-text">Em 1972, o Clube de Roma publicou o relatório <em>Limites do Crescimento</em>, alertando que o modelo de desenvolvimento econômico baseado na exploração ilimitada dos recursos naturais levaria ao colapso ambiental. Meio século depois, a crise hídrica que assola diversas regiões do Brasil confirma as previsões do documento: a má gestão dos recursos hídricos, associada a desmatamentos crescentes e a um modelo agrícola insustentável, ameaça o acesso à água potável de milhões de brasileiros.</p>
+          </div>
+          <div class="para-block">
+            <span class="para-label para-label--dev1">● Desenvolvimento I</span>
+            <p class="para-text">Sob a perspectiva ambiental, o desmatamento é o principal vetor da escassez hídrica no Brasil. De acordo com dados do INPE, a Amazônia perdeu, entre 2019 e 2022, uma área equivalente à Bélgica em cobertura florestal. A geógrafa Larissa Mies Bombardi destaca que as florestas atuam como bombas d'água: suas raízes absorvem a chuva e a distribuem gradualmente para rios e lençóis freáticos, regulando o ciclo hidrológico. A destruição florestal, portanto, não é apenas uma questão ambiental, mas uma ameaça direta à sobrevivência humana.</p>
+          </div>
+          <div class="para-block">
+            <span class="para-label para-label--dev2">● Desenvolvimento II</span>
+            <p class="para-text">Ademais, o modelo de agronegócio predominante no Brasil contribui significativamente para o esgotamento dos recursos hídricos. Segundo a ANA, a irrigação agrícola consome cerca de 67% de toda a água captada no país, e grande parte dessa atividade utiliza técnicas ineficientes, com desperdício de até 40% do volume captado. O economista Ignacy Sachs argumenta que é possível conciliar produção agrícola e sustentabilidade ambiental, desde que haja investimento em tecnologias limpas.</p>
+          </div>
+          <div class="para-block">
+            <span class="para-label para-label--concl">● Conclusão</span>
+            <p class="para-text">Em síntese, a crise hídrica brasileira decorre de escolhas políticas e econômicas que privilegiaram o lucro imediato em detrimento da sustentabilidade. Cabe ao Ministério do Meio Ambiente implementar programas de reflorestamento em bacias hidrográficas degradadas, por meio de parcerias com comunidades locais e pagamento por serviços ambientais, a fim de restaurar o ciclo hidrológico e garantir a segurança hídrica das próximas gerações. Água é vida, e preservá-la é dever coletivo e urgente.</p>
+          </div>
+        </div>
+        <div class="model-scores">
+          <div class="score-chip"><div class="code">C1</div><div class="pts">200</div><div class="lbl">Norma Culta</div></div>
+          <div class="score-chip"><div class="code">C2</div><div class="pts">200</div><div class="lbl">Repertório</div></div>
+          <div class="score-chip"><div class="code">C3</div><div class="pts">200</div><div class="lbl">Argumentos</div></div>
+          <div class="score-chip"><div class="code">C4</div><div class="pts">200</div><div class="lbl">Coesão</div></div>
+          <div class="score-chip"><div class="code">C5</div><div class="pts">200</div><div class="lbl">Intervenção</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3 -->
+    <div class="tab-panel">
+      <div class="model-card">
+        <div class="model-header model-header--verde">
+          <div>
+            <h3>Saúde Mental dos Jovens em Crise</h3>
+            <p>Tema: O aumento dos transtornos mentais entre jovens no Brasil</p>
+          </div>
+          <div class="nota-badge">🏆 1000</div>
+        </div>
+        <div class="model-body">
+          <div class="para-block">
+            <span class="para-label para-label--intro">● Introdução</span>
+            <p class="para-text">Em 1946, a Organização Mundial da Saúde definiu saúde como "um estado de completo bem-estar físico, mental e social, e não apenas a ausência de doenças". Contudo, passados mais de sete décadas, a saúde mental ainda é tratada como um tabu no Brasil, especialmente entre os jovens: segundo dados do IBGE, o suicídio é a quarta causa de morte entre pessoas de 15 a 29 anos no país. Essa realidade evidencia a urgência de se problematizar os fatores que fragilizam a saúde mental dos jovens brasileiros.</p>
+          </div>
+          <div class="para-block">
+            <span class="para-label para-label--dev1">● Desenvolvimento I</span>
+            <p class="para-text">Do ponto de vista psicossocial, a pressão social e o ambiente hiperconectado das redes sociais constituem fatores determinantes para o adoecimento mental juvenil. A psicóloga Sherry Turkle, em sua obra <em>Alone Together</em>, argumenta que o uso excessivo de dispositivos digitais cria um paradoxo: nunca estivemos tão conectados e, ao mesmo tempo, tão solitários. Pesquisa da Unicef aponta que, no Brasil, 1 em cada 5 adolescentes entre 10 e 19 anos sofre de algum transtorno mental.</p>
+          </div>
+          <div class="para-block">
+            <span class="para-label para-label--dev2">● Desenvolvimento II</span>
+            <p class="para-text">Outrossim, a precariedade do sistema de saúde mental pública agrava o quadro de vulnerabilidade dos jovens. Com o desmonte dos CAPS em diversas cidades e a insuficiência de psicólogos e psiquiatras no SUS, grande parte dos jovens que necessita de atendimento não o recebe. O filósofo Michel Foucault apontou que a forma como a sociedade trata o sofrimento mental revela seus valores mais profundos.</p>
+          </div>
+          <div class="para-block">
+            <span class="para-label para-label--concl">● Conclusão</span>
+            <p class="para-text">Diante do exposto, torna-se imperativo que o Estado e a sociedade tratem a saúde mental juvenil como prioridade. Cabe ao Ministério da Saúde, em articulação com o Ministério da Educação, implementar um programa nacional de saúde mental nas escolas públicas, por meio da inserção de psicólogos nas unidades escolares, a fim de identificar precocemente sinais de adoecimento e garantir acolhimento adequado. A saúde mental é um direito, e protegê-la é um imperativo ético e social.</p>
+          </div>
+        </div>
+        <div class="model-scores">
+          <div class="score-chip"><div class="code">C1</div><div class="pts">200</div><div class="lbl">Norma Culta</div></div>
+          <div class="score-chip"><div class="code">C2</div><div class="pts">200</div><div class="lbl">Repertório</div></div>
+          <div class="score-chip"><div class="code">C3</div><div class="pts">200</div><div class="lbl">Argumentos</div></div>
+          <div class="score-chip"><div class="code">C4</div><div class="pts">200</div><div class="lbl">Coesão</div></div>
+          <div class="score-chip"><div class="code">C5</div><div class="pts">200</div><div class="lbl">Intervenção</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AAMFE -->
+<section class="aamfe-section">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="tag" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.6)">Competência 5 — Intervenção</div>
+      <h2 class="section-title">A fórmula que vale 200 pontos</h2>
+      <p class="section-sub">Toda proposta de intervenção nota 1000 segue essa estrutura. Aprenda uma vez, use sempre.</p>
+    </div>
+    <div class="aamfe-grid">
+      <div class="aamfe-card">
+        <div class="aamfe-letter">A</div>
+        <div class="aamfe-name">Agente</div>
+        <div class="aamfe-desc">Quem vai realizar a ação? Ex.: Governo Federal, escolas, ONGs, mídia</div>
+      </div>
+      <div class="aamfe-card">
+        <div class="aamfe-letter">A</div>
+        <div class="aamfe-name">Ação</div>
+        <div class="aamfe-desc">O que será feito? Ex.: implementar, criar, promover, incentivar</div>
+      </div>
+      <div class="aamfe-card">
+        <div class="aamfe-letter">M</div>
+        <div class="aamfe-name">Meio</div>
+        <div class="aamfe-desc">Como será feito? Ex.: por meio de campanhas, leis, programas</div>
+      </div>
+      <div class="aamfe-card">
+        <div class="aamfe-letter">F</div>
+        <div class="aamfe-name">Finalidade</div>
+        <div class="aamfe-desc">Para quê? Ex.: a fim de reduzir, com o propósito de garantir</div>
+      </div>
+      <div class="aamfe-card">
+        <div class="aamfe-letter">D</div>
+        <div class="aamfe-name">Detalhamento</div>
+        <div class="aamfe-desc">Qual o resultado? Ex.: diminuindo a violência, garantindo acesso</div>
+      </div>
+    </div>
+    <div class="aamfe-example">
+      <div class="aamfe-example-label">✦ Exemplo de proposta nota 200 em C5</div>
+      <p>"Cabe ao <strong style="color:#FFCC80">Ministério da Educação</strong> <strong style="color:#80CBC4">inserir nas grades curriculares do ensino básico conteúdos sobre equidade de gênero</strong>, <strong style="color:#CE93D8">por meio de formação continuada de professores e material didático inclusivo</strong>, <strong style="color:#F48FB1">a fim de desconstruir, desde a infância, as bases culturais do machismo</strong>, <strong style="color:#A5D6A7">reduzindo assim os índices de violência doméstica nas gerações futuras</strong>."</p>
+    </div>
+  </div>
+</section>
+
+<!-- ESQUELETOS -->
+<section class="ske-section">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="tag tag--verde">Esqueletos Coringa</div>
+      <h2 class="section-title">5 esqueletos prontos para<br>qualquer tema do ENEM</h2>
+      <p class="section-sub">Estruturas testadas com conectivos já no lugar. Adapte os parênteses ao tema da prova e pronto.</p>
+    </div>
+    <div class="ske-grid">
+      <div class="ske-card ske-card--1">
+        <div class="ske-num">Esqueleto 1</div>
+        <h3>Modelo Universal</h3>
+        <p>Começa com contextualização do tema, desenvolve dois argumentos com exemplos, proposta clara e conclusão com síntese. Funciona para praticamente qualquer tema.</p>
+        <span class="ske-fill">Preencha os (parênteses) e use</span>
+      </div>
+      <div class="ske-card ske-card--2">
+        <div class="ske-num">Esqueleto 2</div>
+        <h3>Modelo Contemporâneo</h3>
+        <p>Abre com o debate atual sobre o tema, apresenta argumentos com impacto social e finaliza com proposta focada em transformação da realidade.</p>
+        <span class="ske-fill">Preencha os (parênteses) e use</span>
+      </div>
+      <div class="ske-card ske-card--3">
+        <div class="ske-num">Esqueleto 3</div>
+        <h3>Modelo Intensificador</h3>
+        <p>Destaca a urgência do tema e seu agravamento ao longo do tempo, ideal para temas de crise social, ambiental ou de saúde pública.</p>
+        <span class="ske-fill">Preencha os (parênteses) e use</span>
+      </div>
+      <div class="ske-card ske-card--4">
+        <div class="ske-num">Esqueleto 4</div>
+        <h3>Modelo Analítico</h3>
+        <p>Propõe análise de causas e consequências do tema, com argumentos baseados em dados e proposta de intervenção com foco em políticas públicas.</p>
+        <span class="ske-fill">Preencha os (parênteses) e use</span>
+      </div>
+      <div class="ske-card ske-card--5">
+        <div class="ske-num">Esqueleto 5</div>
+        <h3>Modelo Causal</h3>
+        <p>Investiga as origens do problema, seus fatores históricos e sociais, e propõe soluções coordenadas entre governo, sociedade civil e iniciativa privada.</p>
+        <span class="ske-fill">Preencha os (parênteses) e use</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONECTIVOS -->
+<section class="con-section">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="tag tag--rosa">Competência 4</div>
+      <h2 class="section-title">Chega de "Além disso" em todo parágrafo</h2>
+      <p class="section-sub">Use conectivos variados e mostre ao corretor que você domina os mecanismos da língua.</p>
+    </div>
+    <div class="con-grid">
+      <div class="con-card con-card--rosa">
+        <div class="con-type">Adição</div>
+        <div class="con-list">
+          <span class="con-pill">Além disso</span>
+          <span class="con-pill">Ademais</span>
+          <span class="con-pill">Outrossim</span>
+          <span class="con-pill">Somado a isso</span>
+        </div>
+      </div>
+      <div class="con-card con-card--azul">
+        <div class="con-type">Contraste</div>
+        <div class="con-list">
+          <span class="con-pill">Entretanto</span>
+          <span class="con-pill">Contudo</span>
+          <span class="con-pill">Todavia</span>
+          <span class="con-pill">No entanto</span>
+        </div>
+      </div>
+      <div class="con-card con-card--verde">
+        <div class="con-type">Causa</div>
+        <div class="con-list">
+          <span class="con-pill">Visto que</span>
+          <span class="con-pill">Uma vez que</span>
+          <span class="con-pill">Haja vista que</span>
+          <span class="con-pill">Em virtude de</span>
+        </div>
+      </div>
+      <div class="con-card con-card--pur">
+        <div class="con-type">Consequência</div>
+        <div class="con-list">
+          <span class="con-pill">Por conseguinte</span>
+          <span class="con-pill">Portanto</span>
+          <span class="con-pill">Dessa forma</span>
+          <span class="con-pill">Logo</span>
+        </div>
+      </div>
+      <div class="con-card con-card--ora">
+        <div class="con-type">Exemplificação</div>
+        <div class="con-list">
+          <span class="con-pill">A título de ilustração</span>
+          <span class="con-pill">De acordo com</span>
+          <span class="con-pill">Segundo dados</span>
+        </div>
+      </div>
+      <div class="con-card con-card--teal">
+        <div class="con-type">Conclusão</div>
+        <div class="con-list">
+          <span class="con-pill">Diante do exposto</span>
+          <span class="con-pill">Em síntese</span>
+          <span class="con-pill">Ante o exposto</span>
+          <span class="con-pill">Em suma</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTEMUNHOS -->
+<section class="testi-section">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="tag tag--azul">Resultados reais</div>
+      <h2 class="section-title">Quem usou o método aprovado</h2>
+      <p class="section-sub">Estudantes que aplicaram o guia e conquistaram a nota que precisavam.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="nota-pill">⭐ 960 pts</div>
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Tirei 640 na minha primeira tentativa. Com o guia, entendi o que faltava na minha C5 e C4. Na segunda prova, fui a 960. Esse material mudou minha relação com a redação.</p>
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-author">
+          <div class="testi-avatar testi-avatar--rosa">M</div>
+          <div>
+            <div class="testi-name">Maria Luíza S.</div>
+            <div class="testi-city">Recife, PE</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="nota-pill">⭐ 1000 pts</div>
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Sempre tive dificuldade com a proposta de intervenção. O guia me ensinou a fórmula AAMFD de um jeito que eu nunca mais esqueci. Fui a 1000 na redação desse ano!</p>
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-author">
+          <div class="testi-avatar testi-avatar--verde">C</div>
+          <div>
+            <div class="testi-name">Carlos Eduardo R.</div>
+            <div class="testi-city">Salvador, BA</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="nota-pill">⭐ 920 pts</div>
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Os esqueletos coringa salvaram minha prova. Treinei com eles durante 3 semanas e na hora da prova me senti segura. O método é prático, direto e funciona de verdade.</p>
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-author">
+          <div class="testi-avatar testi-avatar--azul">A</div>
+          <div>
+            <div class="testi-name">Amanda T.</div>
+            <div class="testi-city">Fortaleza, CE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="preco">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="tag tag--rosa">Apenas R$ 10,00</div>
+      <h2 class="section-title">Menos que um lanche.<br>Vale a sua aprovação.</h2>
+      <p class="section-sub">Por apenas R$ 10,00, acesso imediato e vitalício. Sem mensalidade, sem assinatura.</p>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pricing-top">
+        <div class="label">✦ Menor preço do mercado</div>
+        <h3>O Mapa da Redação Nota 1000</h3>
+        <div class="pricing-was">De R$ 97,00</div>
+        <div class="pricing-now"><sup>R$</sup>10</div>
+        <div class="pricing-cents">pagamento único · acesso vitalício</div>
+      </div>
+      <div class="pricing-body">
+        <ul>
+          <li><span class="ck">✓</span><span>Guia completo das 5 Competências do ENEM</span></li>
+          <li><span class="ck">✓</span><span>Passo a passo dos 4 parágrafos com dicas práticas</span></li>
+          <li><span class="ck">✓</span><span>3 redações nota 1000 completas e comentadas</span></li>
+          <li><span class="ck">✓</span><span>5 esqueletos coringa adaptáveis para qualquer tema</span></li>
+          <li><span class="ck">✓</span><span>Arsenal de conectivos para a Competência 4</span></li>
+          <li><span class="ck">✓</span><span>Fórmula AAMFD para proposta de intervenção perfeita</span></li>
+          <li><span class="ck">✓</span><span>Caderno de treino com folhas oficiais (rascunho + definitivo)</span></li>
+          <li><span class="ck">✓</span><span>PDF otimizado para leitura no celular e impressão</span></li>
+          <li><span class="ck">✓</span><span>Acesso imediato após o pagamento</span></li>
+        </ul>
+        <a href="#" class="btn-primary">
+          QUERO O GUIA AGORA — R$ 10,00
+          <small>🔒 Pagamento seguro via Pix, cartão ou boleto</small>
+        </a>
+        <div class="pricing-guarantee">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          Garantia de 7 dias: se não se sentir mais preparado, devolvemos 100% — sem perguntas
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="tag tag--azul">Dúvidas frequentes</div>
+      <h2 class="section-title">Perguntas frequentes</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Como recebo o material após a compra?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Imediatamente após a confirmação do pagamento, você recebe o PDF por e-mail e também tem acesso pela plataforma. O processo é automático — Pix é liberado na hora; cartão e boleto podem levar alguns minutos.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Funciona para quem está começando do zero?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Sim! O guia foi criado justamente para quem não sabe por onde começar. A linguagem é clara, o passo a passo é visual e os esqueletos já dão a estrutura pronta. Você só precisa preencher com o tema da sua prova.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Posso usar no celular?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Sim. O PDF é otimizado para leitura em celular, tablet e computador. Você também pode imprimir as folhas de treino sempre que precisar — sem limite de cópias.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Os modelos são redações reais ou fictícias?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">São redações elaboradas seguindo rigorosamente os critérios de avaliação do ENEM, com referências filosóficas, dados reais e estrutura testada. Cada parágrafo é identificado por cor para que você entenda exatamente o que está funcionando e por quê.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Há garantia caso eu não goste?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Sim. Você tem 7 dias a partir da compra para solicitar reembolso integral, sem burocracia e sem precisar explicar o motivo. Se estudar o guia e não se sentir mais preparado para a redação, devolvemos 100% do valor — é simples assim.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Serve para o ENEM de qualquer ano?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Sim. As 5 competências, a estrutura dissertativo-argumentativa e os critérios de avaliação do ENEM não mudam de ano para ano. O método ensinado no guia é permanente e se aplica a qualquer edição da prova.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          A oferta vai acabar?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">O preço de R$ 10,00 é uma oferta de lançamento e pode subir a qualquer momento. Não há data definida, mas o preço normal do material é R$ 97,00. Aproveite enquanto está neste valor.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container--narrow">
+    <h2>
+      Sua nota máxima<br>
+      <em>começa agora.</em>
+    </h2>
+    <p>Mais de 1000 estudantes já estão treinando com o método. Não espere a véspera da prova para aprender o que pode mudar tudo.</p>
+    <a href="#preco" class="btn-primary">QUERO A NOTA 1000 — R$ 10,00</a>
+    <p style="margin-top:16px;font-size:13px;color:rgba(255,255,255,.35)">🔒 Pagamento seguro · Garantia de 7 dias · Acesso imediato</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    © 2026 O Mapa da Redação Nota 1000 · Todos os direitos reservados<br>
+    <a href="#">Política de Privacidade</a> · <a href="#">Termos de Uso</a> · <a href="#">Suporte</a>
+  </p>
+</footer>
+
+<!-- FLOATING CTA (mobile) -->
+<a href="#preco" class="float-cta">
+  🎯 Quero a Nota 1000
+</a>
+
+<script>
+  // Tab switching
+  function showTab(index) {
+    document.querySelectorAll('.tab-panel').forEach((p, i) => p.classList.toggle('active', i === index));
+    document.querySelectorAll('.tab-btn').forEach((b, i) => b.classList.toggle('active', i === index));
+  }
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Sticky nav shadow
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Smooth reveal on scroll (IntersectionObserver)
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.product-card, .comp-card, .ske-card, .testi-card, .problem-card, .aamfe-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity .5s ease, transform .5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
